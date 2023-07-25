@@ -1,5 +1,5 @@
 <script >
-import HeaderComponent from './components/HeaderComponent.vue';
+import PageHeader from './components/PageHeader.vue';
 
 export default {
   data() {
@@ -8,7 +8,7 @@ export default {
     }
   },
   components: {
-    HeaderComponent,
+    PageHeader,
   },
   methods: {
 
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-  <HeaderComponent />
+  <PageHeader />
 </template>
 
 <style lang="scss">
