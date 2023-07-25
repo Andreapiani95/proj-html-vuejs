@@ -57,7 +57,7 @@ export default {
         <div class="banner-bg">
             <div class="container-xl">
                 <div class="row">
-                    <div class="col-5 text-white">
+                    <div class="col-4 text-white">
                         <h2>Game With Live Streaming</h2>
                         <h1>Future of Esports</h1>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta beatae laboriosam minima
@@ -67,8 +67,11 @@ export default {
                             <PlayComponent />
                         </span>
                     </div>
-                    <div class="col-7">
-                        <img src="img/index-banner-illus.png" alt="">
+                    <div class="col-8">
+                        <div class="banner-image-container">
+                            <img class="banner-image" src="img/index-banner-illus.png" alt="">
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -129,5 +132,13 @@ nav {
     position: absolute;
     right: 1px;
     top: 1px;
+}
+
+.banner-image-container {
+    width: 100%;
+
+    .banner-image {
+        width: 100%;
+    }
 }
 </style>
