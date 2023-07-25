@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-    <header class="my-header-bg">
+    <header class="my-header-bg my-0">
         <div class="container-xl">
             <div class="row">
                 <div class="col">
@@ -56,7 +56,7 @@ export default {
 
         <div class="banner-bg">
             <div class="container-xl">
-                <div class="row">
+                <div class="row my-0">
                     <div class="col-4 text-white">
                         <h2>Game With Live Streaming</h2>
                         <h1>Future of Esports</h1>
