@@ -43,22 +43,26 @@ export default {
     <footer class="my-0">
         <section class="my-footer-bg-top">
             <div class="container-xl position-relative">
-                <div class="my-footer-card mx-auto ">
-                    <div class="row">
-                        <div class="col-7 text-white py-5">
-                            <h2>Subscribe Newsletter</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit doloribus magni quia dolorum.
-                            </p>
-                        </div>
-                        <div class="col-5">
-                            <div class="my-input-group py-5">
-                                <input class="text-light rounded-4" type="text" name="" id=""
-                                    placeholder="Enter your email">
-                                <span><img src="img/icon/send-icon.png" alt=""></span>
+                <div class="border rounded-5 position-absolute">
+                    <div class="my-footer-card mx-auto ">
+                        <div class="row">
+                            <div class="col text-white py-5">
+                                <h2>Subscribe Newsletter</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit doloribus magni quia
+                                    dolorum.
+                                </p>
+                            </div>
+                            <div class="col-5">
+                                <div class="my-input-group py-5">
+                                    <input class="text-light rounded-4" type="text" name="" id=""
+                                        placeholder="Enter your email">
+                                    <span><img src="img/icon/send-icon.png" alt=""></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="row text-white pt-5">
                     <div class="col-4">
                         <img id="logo" src="img/logo.png" alt="">
@@ -131,6 +135,18 @@ export default {
 
 .my-footer-bg-top {
     background-color: $footer-bg-1;
+    padding-top: 100px;
+
+    div {
+        .position-absolute {
+            position: absolute;
+            width: 80%;
+            bottom: 300px;
+            left: 100px;
+            border: transparent;
+            background-color: $color-4;
+        }
+    }
 }
 
 .my-footer-bg-bottom {
@@ -138,11 +154,7 @@ export default {
 }
 
 .my-footer-card {
-    width: 80%;
-
-    div {
-        background-color: $color-4;
-    }
+    width: 90%;
 
 }
 
