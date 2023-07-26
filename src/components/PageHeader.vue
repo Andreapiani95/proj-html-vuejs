@@ -118,6 +118,7 @@ export default {
     h1 {
         font-size: 4.2em;
         font-weight: bold;
+        overflow: hidden;
     }
 }
 

@@ -19,8 +19,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../scss/variables.scss" as *;
-
 .my-play-button {
     background-color: white;
     border-radius: 50%/50%;
