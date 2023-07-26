@@ -42,12 +42,12 @@ export default {
 <template>
     <footer class="my-0">
         <section class="my-footer-bg-top">
-            <div class="container-xl position-relative">
-                <div class="border rounded-5 position-absolute">
+            <div class="container-xl">
+                <div class="border rounded-5">
                     <div class="my-footer-card mx-auto ">
                         <div class="row">
                             <div class="col text-white py-5">
-                                <h2>Subscribe Newsletter</h2>
+                                <h2 class="overflow-hidden">Subscribe Newsletter</h2>
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit doloribus magni quia
                                     dolorum.
                                 </p>
@@ -139,7 +139,7 @@ export default {
 
     div {
         .position-absolute {
-            position: absolute;
+
             width: 80%;
             bottom: 300px;
             left: 100px;
