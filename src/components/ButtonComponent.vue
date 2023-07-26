@@ -6,6 +6,9 @@ export default {
 
         }
     },
+    props: {
+        buttonText: String,
+    },
     methods: {
 
     }
@@ -13,8 +16,11 @@ export default {
 </script>
 
 <template>
-    <button class="btn text-black my-button">
-        premi
+    <button class="btn text-black my-button fw-bold">
+        {{ buttonText }}
+        <span v-show="buttonText !== 'LIVE STREAMING'">
+            <img src="img/svg/e-double-right-arrow.svg" alt="">
+        </span>
     </button>
 </template>
 
@@ -22,10 +28,16 @@ export default {
 @use "../scss/variables.scss" as *;
 
 .my-button {
-    border-radius: 25% / 50%;
+    border-radius: 15% / 50%;
     padding: 10px;
     background-color: $color-1;
     border: 3px solid black;
     outline: 1px solid $color-1;
+
+    span {
+        img {
+            filter: invert(1);
+        }
+    }
 }
 </style>

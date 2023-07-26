@@ -10,7 +10,7 @@
 }
 
 #logo {
-    width: 100px;
+    width: 120px;
 }
 
 ul {
@@ -29,5 +29,9 @@ ul {
 
 
 .my-green-text {
+    color: $color-2;
+}
+
+li>a:hover {
     color: $color-2;
 }

@@ -43,8 +43,8 @@ export default {
     <footer class="my-0">
         <section class="my-footer-bg-top">
             <div class="container-xl position-relative">
-                <div class="card my-footer-card mx-auto">
-                    <div class="card-body row">
+                <div class="my-footer-card mx-auto ">
+                    <div class="row">
                         <div class="col-7 text-white py-5">
                             <h2>Subscribe Newsletter</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit doloribus magni quia dolorum.
@@ -139,7 +139,6 @@ export default {
 
 .my-footer-card {
     width: 80%;
-    border: 1px black;
 
     div {
         background-color: $color-4;

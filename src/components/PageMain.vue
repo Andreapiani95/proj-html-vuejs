@@ -75,33 +75,33 @@ export default {
 <template>
     <main class="my-0">
         <section class="bg-black">
-            <div class="container-xl">
+            <div class="main-section-1">
                 <div class="row">
                     <div class="col-6">
                         <div class="img-container">
                             <img src="img/features-illus.png" alt="">
                         </div>
                     </div>
-                    <div class="col-6 text-white">
-                        <h4 class="my-green-text">The Ultimate Competitive Gaming Platform</h4>
-                        <h2>Make Your Own Mark On The Battle Field</h2>
+                    <div class="col-4 text-white">
+                        <h4 class="my-green-text fw-bold">The Ultimate Competitive Gaming Platform</h4>
+                        <h2 class="fw-bold main-section-1-title">Make Your Own Mark On The Battle Field</h2>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, exercitationem perferendis
                             nihil quibusdam optio vitae voluptatibus debitis ipsam, enim rerum facere nam reiciendis dolore
                             aliquam ex in laboriosam quasi repellat!
                         </p>
-                        <div>
+                        <div class="pb-5">
                             <div v-for="(element, index) in  shortcutSection " class="row">
                                 <div class="col-3">
                                     <img :src="element.path" alt="  ">
                                 </div>
                                 <div class="col-9">
-                                    <h4>{{ element.title }}</h4>
+                                    <h4 class="pb-2">{{ element.title }}</h4>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cum pariatur
                                         aspernatur commodi quia? Doloremque?</p>
                                 </div>
                             </div>
                         </div>
-                        <ButtonComponent />
+                        <ButtonComponent buttonText="PLAN NOW" />
                     </div>
                 </div>
             </div>
@@ -110,12 +110,12 @@ export default {
         <section class="bg-battle">
             <div class="container-xl">
                 <div class="row justify-content-center text-center">
-                    <div class="col-5">
-                        <h4 class="my-green-text">Trending Battle</h4>
-                        <h2 class="text-white">
+                    <div class="col-7">
+                        <h4 class="my-green-text fw-bold">Trending Battle</h4>
+                        <h2 class="text-white fw-bold battle-section-title py-2">
                             Keep Eyes & Manage Upcoming Battle
                         </h2>
-                        <p class="text-light">
+                        <p class="text-light fw-light pb-5">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor sit
                             ullam
                             placeat reiciendis
@@ -125,21 +125,21 @@ export default {
                 </div>
                 <div class="row">
                     <div v-for="(element, index) in battleSection" class="col-6">
-                        <div class="card my-card-battle">
-                            <div class="row justify-content-around">
-                                <div class="col-4">
+                        <div class="card my-card-battle rounded-4 my-3">
+                            <div class="row justify-content-between py-3">
+                                <div class="col-4 battle-icon">
                                     <img :src="element.team1" alt="">
                                 </div>
-                                <div class="col-4">
-                                    <img src="img/versus-icon.png" alt="">
+                                <div class="col-4 battle-icon">
+                                    <img class="versus-icon" src="img/versus-icon.png" alt="">
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4 battle-icon">
                                     <img :src="element.team2" alt="">
                                 </div>
                             </div>
                             <div class="card-body text-center my-card-body">
                                 <p class="card-text">
-                                <h3 class="text-white">{{ element.title }}</h3>
+                                <h3 class="text-white py-3">{{ element.title }}</h3>
                                 <p class="my-green-text">December 25, 2022 4:00 PM</p>
                                 </p>
                             </div>
@@ -148,7 +148,7 @@ export default {
                                     <span>
                                         <img src="img/icon/youtube-icon.png" alt="">
                                     </span>
-                                    <span>
+                                    <span class="pe-2">
                                         Youtube
                                     </span>
                                     <span>
@@ -163,16 +163,16 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div class="text-center">
-                    <ButtonComponent />
+                <div class="text-center pt-5">
+                    <ButtonComponent buttonText="VIEW ALL MATCH" />
                 </div>
 
             </div>
         </section>
 
-        <section class="bg-black">
+        <section class="bg-black quick-facts-section">
             <div class="container-xl">
-                <h2 class="text-center text-white">Futio Quick Facts</h2>
+                <h2 class="text-center text-white fw-bold">Futio Quick Facts</h2>
                 <div class="row">
                     <div class="col-3" v-for="(element, index) in quickFacts">
                         <div class="card bg-transparent border rounded-5">
@@ -191,8 +191,35 @@ export default {
 <style lang="scss" scoped>
 @use "../scss/variables.scss" as *;
 
+.main-section-1 {
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+.main-section-1-title {
+    font-size: 3rem;
+}
+
+.battle-section-title {
+    font-size: 3.5rem;
+}
+
+.quick-facts-section {
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    div {
+        h2 {
+            font-size: 3.5em;
+            padding-bottom: 5%;
+        }
+    }
+}
+
 .bg-battle {
     background-color: #212733;
+    padding-top: 5%;
+    padding-bottom: 7%
 }
 
 .img-container {
@@ -204,8 +231,22 @@ export default {
 .my-card-battle {
     background-color: $footer-bg-1;
 
+
     .my-card-body {
         background-color: $color-4;
+    }
+}
+
+.battle-icon {
+    padding-top: 15px;
+
+    img {
+        padding-left: 15px;
+    }
+
+    .versus-icon {
+        padding-left: 55px;
+        padding-top: 20px;
     }
 }
 </style>
