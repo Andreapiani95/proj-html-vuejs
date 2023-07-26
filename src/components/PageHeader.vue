@@ -35,12 +35,21 @@ export default {
                 </div>
                 <div class="col-7 text-center">
                     <nav>
-                        <ul class="fs-5">
+                        <ul class="fs-5 dropdown">
                             <li v-for="(navElement, index) in navMenu">
 
-                                <a class="nav-links px-2" href="">{{ navElement }} <img v-show="index > 0 && index < 5"
-                                        src="img/svg/c-down-arrow.svg" alt="">
+                                <a class="nav-links px-2" href="" :data-bs-toggle="index > 0 && index < 5 ? 'dropdown' : ''"
+                                    :role="index > 0 && index <
+                                        5 ? 'button' : ''">
+                                    {{ navElement }} <img v-show="index > 0 && index < 5" src="img/svg/c-down-arrow.svg"
+                                        alt="">
                                 </a>
+                                <ul class="dropdown-menu my-dropdown">
+                                    <li><a class="dropdown-item" href="#">Games</a></li>
+                                    <li><a class="dropdown-item" href="#">Games Details</a></li>
+                                    <li><a class="dropdown-item" href="#">Match Details</a></li>
+                                </ul>
+
 
                             </li>
                         </ul>
@@ -67,6 +76,7 @@ export default {
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta beatae laboriosam minima
                             repellat?
                         </p>
+
                         <ButtonComponent buttonText="EXPLORE GAMES" />
                         <span class="play-from-header">
                             <PlayComponent />
@@ -93,7 +103,6 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: -1;
 
     .banner-bg {
         background-image: url('./img/game-controler.png');
@@ -132,6 +141,16 @@ nav {
 
 .play-from-header {
     padding-left: 15px;
+}
+
+.my-dropdown {
+    background-color: $footer-bg-1;
+
+    li {
+        a {
+            color: $color-3;
+        }
+    }
 }
 
 .shop-icon {

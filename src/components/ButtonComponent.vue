@@ -40,4 +40,9 @@ export default {
         }
     }
 }
+
+.my-button:hover {
+    background-color: $color-2;
+    outline-color: $color-2;
+}
 </style>

@@ -68,7 +68,7 @@ export default {
                         </p>
                         <div>
                             <span v-for="(icon) in iconArray">
-                                <i class="fa-brands me-3 p-3 rounded-5 border border-1" :class="icon">
+                                <i class="fa-brands me-3 p-3 rounded-5 border border-1 my-icons" :class="icon">
                                 </i>
                             </span>
                         </div>
@@ -170,5 +170,9 @@ export default {
             border-radius: 50%;
         }
     }
+}
+
+.my-icons:hover {
+    background-color: $color-2;
 }
 </style>
